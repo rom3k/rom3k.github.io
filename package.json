@@ -1,0 +1,26 @@
+{
+	"name": "rom3k.github.io",
+	"version": "0.0.1",
+	"description": "My personal site hosted on GitHub pages",
+	"main": "index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rom3k/rom3k.github.io.git"
+	},
+	"author": "Michał Romaszkin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rom3k/rom3k.github.io/issues"
+	},
+	"homepage": "https://github.com/rom3k/rom3k.github.io#readme",
+	"devDependencies": {
+		"css-loader": "^4.2.2",
+		"sass": "^1.26.10",
+		"sass-loader": "^10.0.1",
+		"style-loader": "^1.2.1",
+		"ts-loader": "^8.0.3",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	}
+}
