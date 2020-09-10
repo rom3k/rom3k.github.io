@@ -53,7 +53,7 @@ module.exports = {
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
                 use: {
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
                         limit: 10000,
                         name: '[name].[ext]',
@@ -107,4 +107,8 @@ module.exports = {
         }),
         new LoadablePlugin(),
     ],
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './',
+    },
 };
