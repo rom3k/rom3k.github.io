@@ -5,6 +5,8 @@ import loadable from '@loadable/component';
 import { CSSTransition } from 'react-transition-group';
 const { useEffect, useState } = React;
 
+import './App.scss';
+
 const MainPage = loadable(
     () =>
         import(
@@ -13,20 +15,17 @@ const MainPage = loadable(
 );
 
 export default function App() {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [inProp, setInProp] = useState(false);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 600) {
+            if (window.scrollY > 500) {
                 setInProp(true);
             } else {
                 setInProp(false);
             }
         });
-        setTimeout(() => {
-            setLoading(false);
-        }, 800);
     }, []);
 
     if (loading) {
