@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Spinner, Navbar } from 'react-bootstrap';
 import loadable from '@loadable/component';
+import { CSSTransition } from 'react-transition-group';
 const { useEffect, useState } = React;
 
 const MainPage = loadable(
@@ -13,8 +14,16 @@ const MainPage = loadable(
 
 export default function App() {
     const [loading, setLoading] = useState(true);
+    const [inProp, setInProp] = useState(false);
 
     useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                setInProp(true);
+            } else {
+                setInProp(false);
+            }
+        });
         setTimeout(() => {
             setLoading(false);
         }, 800);
@@ -40,7 +49,16 @@ export default function App() {
     return (
         <>
             <Navbar sticky="top">
-                <Navbar.Brand>Michał Romaszkin</Navbar.Brand>
+                <Navbar.Brand>
+                    <CSSTransition
+                        in={inProp}
+                        classNames="transition-brand"
+                        className="transition-brand"
+                        timeout={500}
+                    >
+                        <span>Michał Romaszkin</span>
+                    </CSSTransition>
+                </Navbar.Brand>
             </Navbar>
             <MainPage />
         </>

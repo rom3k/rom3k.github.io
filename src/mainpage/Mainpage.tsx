@@ -8,11 +8,17 @@ import './Mainpage.scss';
 import Avatar from '../assets/avatar.jpg';
 import Chevron from '../assets/chevron_down.svg';
 
+const sizes = {
+    width: window.innerWidth || document.body.clientWidth,
+    height: window.innerHeight || document.body.clientHeight,
+};
+
 export default function MainPage() {
-    const [inProp, setInProp] = useState<boolean>(false);
-    useEffect(() => {
-        window.addEventListener('scroll', () => {});
-    }, []);
+    /* State for displaying transitions with little delay */
+    const [inProp, setInProp] = useState({
+        fullName: false,
+    });
+
     return (
         <Container fluid>
             <Row className="justify-content-md-center mainRow">
@@ -30,9 +36,9 @@ export default function MainPage() {
                         appear={true}
                         classNames="fullName"
                         timeout={2000}
-                        onEntered={() => {
-                            setInProp(true);
-                        }}
+                        onEntered={() =>
+                            setInProp((state) => ({ fullName: true }))
+                        }
                     >
                         <div>
                             <h2>Michał Romaszkin</h2>
@@ -40,7 +46,7 @@ export default function MainPage() {
                         </div>
                     </CSSTransition>
                     <CSSTransition
-                        in={inProp}
+                        in={inProp.fullName}
                         timeout={500}
                         classNames="loadMore"
                         className="loadMore"
@@ -56,7 +62,7 @@ export default function MainPage() {
                 id="description"
             >
                 <Col md={4} className="rowDescription__column">
-                    <h3>O mnie</h3>
+                    <h3 className="rowDescription__header">O mnie</h3>
                     <p>
                         Mam 23 lata. Pochodzę ze Szczecina, aktualnie mieszkam w
                         Poznaniu. W wolnym czasie uwielbiam grać w gry od
@@ -75,7 +81,7 @@ export default function MainPage() {
                     md={{ span: 4, offset: 2 }}
                     className="rowDescription__column"
                 >
-                    <h3>Umiejętności</h3>
+                    <h3 className="rowDescription__header">Umiejętności</h3>
                 </Col>
             </Row>
         </Container>

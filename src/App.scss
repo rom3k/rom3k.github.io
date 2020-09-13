@@ -13,3 +13,27 @@ html {
 p {
     color: #454545;
 }
+
+/* All things related to App component */
+.transition-brand,
+.transition-brand-enter {
+    opacity: 0;
+}
+
+.transition-brand-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.transition-brand-enter-done {
+    opacity: 1;
+}
+
+.transition-brand-exit {
+    opacity: 1;
+}
+
+.transition-brand-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
