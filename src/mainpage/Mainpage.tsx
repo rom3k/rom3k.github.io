@@ -11,6 +11,7 @@ import Js from '../assets/js.svg';
 import html5 from '../assets/html5.svg';
 import css3 from '../assets/css3.svg';
 import angular from '../assets/angular.svg';
+import react from '../assets/react.svg'; // :thinking:
 
 // TODO(rom3k): Use this for future scroll events
 const sizes = {
@@ -40,28 +41,43 @@ export default function MainPage() {
 
     return (
         <Container fluid>
-            <Row className="justify-content-md-center mainRow">
-                <Col md="auto" className="main">
-                    <CSSTransition
-                        in={true}
-                        appear={true}
-                        timeout={1000}
-                        classNames="avatar"
-                    >
-                        <Image src={Avatar} roundedCircle />
-                    </CSSTransition>
-                    <CSSTransition
-                        in={true}
-                        appear={true}
-                        classNames="fullName"
-                        timeout={2000}
-                        onEntered={() => setInProp(() => ({ fullName: true }))}
-                    >
-                        <div>
-                            <h2>Michał Romaszkin</h2>
-                            <p>JavaScript developer</p>
-                        </div>
-                    </CSSTransition>
+            <Row className="min-vh-100 justify-content-center">
+                <Col
+                    md="auto"
+                    className="d-flex align-items-center flex-column justify-content-around"
+                >
+                    <div className="d-flex flex-column align-items-center">
+                        <CSSTransition
+                            in={true}
+                            appear={true}
+                            timeout={1000}
+                            classNames="avatar"
+                            className="avatar"
+                        >
+                            <Image src={Avatar} roundedCircle />
+                        </CSSTransition>
+                        <CSSTransition
+                            in={true}
+                            appear={true}
+                            classNames="fullName"
+                            timeout={2000}
+                            onEntered={() =>
+                                setInProp((state) => ({
+                                    ...state,
+                                    fullName: true,
+                                }))
+                            }
+                        >
+                            <div>
+                                <h1 className="text-center">
+                                    Michał Romaszkin
+                                </h1>
+                                <p className="text-center h5">
+                                    JavaScript developer
+                                </p>
+                            </div>
+                        </CSSTransition>
+                    </div>
                     <CSSTransition
                         in={inProp.fullName}
                         timeout={500}
@@ -85,14 +101,14 @@ export default function MainPage() {
             >
                 <Col md={4} className="rowDescription__column">
                     <h3 className="rowDescription__title">O mnie</h3>
-                    <p className="rowDescription__paragraph">
+                    <p className="rowDescription__paragraph text-justify">
                         Mam 23 lata. Pochodzę ze Szczecina, aktualnie mieszkam w
                         Poznaniu. W wolnym czasie uwielbiam grać w gry od
                         Paradox Interactive oraz opiekować się roślinami. Kiedyś
                         dużo grałem w siatkówkę, aktulanie lubię śledzić wyniki
                         w różnych ligach.
                     </p>
-                    <p className="rowDescription__paragraph">
+                    <p className="rowDescription__paragraph text-justify">
                         W technikum poznałem Angulara - od tego frameworka
                         zaczęła się moja przygoda z techologiami webowymi.
                         Programuję głównie w JavaScript (TypeScript). Staram się
@@ -126,6 +142,12 @@ export default function MainPage() {
                         src={angular}
                         title="Angular"
                         alt="Angular logo"
+                        percentage={50}
+                    />
+                    <Skill
+                        src={react}
+                        title="React"
+                        alt="React logo"
                         percentage={50}
                     />
                 </Col>

@@ -1,3 +1,7 @@
+.avatar {
+    margin-bottom: 1rem;
+}
+
 .avatar-appear-active {
     animation: fadeInUp;
     animation-duration: 1s;
@@ -17,16 +21,12 @@
     opacity: 1;
 }
 
-.loadMore {
-    margin-top: 20rem;
-}
-
 .loadMore,
 .loadMore-enter {
     opacity: 0;
     &__chevron {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         cursor: pointer;
     }
 }
@@ -41,17 +41,6 @@
     opacity: 1;
 }
 
-.mainRow {
-    min-height: 100vh;
-}
-
-.main {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 10rem;
-}
-
 .rowDescription {
     min-height: 100vh;
     scroll-margin-top: 3rem;
@@ -59,7 +48,7 @@
         margin-top: 6rem;
     }
     &__title {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     &__paragraph {
         font-size: 1.05rem;
