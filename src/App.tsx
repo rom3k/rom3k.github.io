@@ -15,7 +15,7 @@ const MainPage = loadable(
 );
 
 export default function App() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [inProp, setInProp] = useState(false);
 
     useEffect(() => {
@@ -26,6 +26,7 @@ export default function App() {
                 setInProp(false);
             }
         });
+        setLoading(false);
     }, []);
 
     if (loading) {

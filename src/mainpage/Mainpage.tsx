@@ -10,6 +10,7 @@ import Chevron from '../assets/chevron_down.svg';
 import Js from '../assets/js.svg';
 import html5 from '../assets/html5.svg';
 import css3 from '../assets/css3.svg';
+import angular from '../assets/angular.svg';
 
 // TODO(rom3k): Use this for future scroll events
 const sizes = {
@@ -19,6 +20,15 @@ const sizes = {
 
 const scrollTo = (ref: any) => {
     window.scrollTo(0, ref.current.offsetTop);
+};
+
+const Skill = ({ percentage, src, title, alt }) => {
+    return (
+        <div className="skill">
+            <img src={src} alt={alt} title={title} className="skill__image" />
+            <ProgressBar now={percentage} className="skill__progressBar" />
+        </div>
+    );
 };
 
 export default function MainPage() {
@@ -45,9 +55,7 @@ export default function MainPage() {
                         appear={true}
                         classNames="fullName"
                         timeout={2000}
-                        onEntered={() =>
-                            setInProp((state) => ({ fullName: true }))
-                        }
+                        onEntered={() => setInProp(() => ({ fullName: true }))}
                     >
                         <div>
                             <h2>Michał Romaszkin</h2>
@@ -96,33 +104,30 @@ export default function MainPage() {
                     className="rowDescription__column"
                 >
                     <h3 className="rowDescription__title">Umiejętności</h3>
-                    <div className="skill">
-                        <img
-                            src={Js}
-                            className="skill__image"
-                            alt="Javascript logo"
-                            title="JavaScript"
-                        />
-                        <ProgressBar now={65} className="skill__progressBar" />
-                    </div>
-                    <div className="skill">
-                        <img
-                            src={html5}
-                            className="skill__image"
-                            alt="HTML5 logo"
-                            title="HTML5"
-                        />
-                        <ProgressBar now={75} className="skill__progressBar" />
-                    </div>
-                    <div className="skill">
-                        <img
-                            src={css3}
-                            className="skill__image"
-                            alt="CSS3 logo"
-                            title="CSS3"
-                        />
-                        <ProgressBar now={70} className="skill__progressBar" />
-                    </div>
+                    <Skill
+                        src={html5}
+                        title="HTML5"
+                        alt="HTML5 Logo"
+                        percentage={75}
+                    />
+                    <Skill
+                        src={Js}
+                        title="JavaScript"
+                        alt="JavaScript logo"
+                        percentage={65}
+                    />
+                    <Skill
+                        src={css3}
+                        title="CSS3"
+                        alt="CSS3 logo"
+                        percentage={70}
+                    />
+                    <Skill
+                        src={angular}
+                        title="Angular"
+                        alt="Angular logo"
+                        percentage={50}
+                    />
                 </Col>
             </Row>
         </Container>
