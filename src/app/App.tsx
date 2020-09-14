@@ -10,7 +10,7 @@ import './App.scss';
 const MainPage = loadable(
     () =>
         import(
-            /* webpackChunkName: "MainPageComponent" */ './mainpage/Mainpage'
+            /* webpackChunkName: "MainPageComponent" */ '../mainpage/Mainpage'
         )
 );
 
@@ -46,6 +46,7 @@ export default function App() {
             </div>
         );
     }
+    // TODO(rom3k): Create proper router
     return (
         <>
             <Navbar sticky="top">

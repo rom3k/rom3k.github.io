@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import './main.scss';
 
-import App from './App';
+import App from './app/App';
 
 const root = document.getElementById('root');
 render(React.createElement(App), root);
