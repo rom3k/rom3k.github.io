@@ -3,7 +3,10 @@
     "version": "0.0.1",
     "description": "My personal site hosted on GitHub pages",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "start": "webpack-dev-server",
+        "build": "webpack --progress"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rom3k/rom3k.github.io.git"

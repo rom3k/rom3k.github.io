@@ -4,6 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 
+// TODO(rom3k): Create new file for production build
+
 /** @type {import('webpack').Configuration} */
 module.exports = {
     mode: 'development',
