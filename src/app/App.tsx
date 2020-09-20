@@ -49,7 +49,12 @@ export default function App() {
     // TODO(rom3k): Create proper router
     return (
         <>
-            <Navbar sticky="top">
+            <Navbar
+                sticky="top"
+                style={{
+                    backgroundColor: inProp ? '#eee' : '',
+                }}
+            >
                 <Navbar.Brand>
                     <CSSTransition
                         in={inProp}

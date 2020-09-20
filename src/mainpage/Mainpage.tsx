@@ -37,7 +37,8 @@ export default function MainPage() {
     const [inProp, setInProp] = useState({
         fullName: false,
     });
-    const ref = useRef(null);
+    const skillsPageRef = useRef(null);
+    const contactPageRef = useRef(null);
 
     return (
         <Container fluid>
@@ -88,70 +89,82 @@ export default function MainPage() {
                             <img
                                 className="loadMore__chevron"
                                 src={Chevron}
-                                onClick={() => scrollTo(ref)}
+                                onClick={() => scrollTo(skillsPageRef)}
                             />
                         </div>
                     </CSSTransition>
                 </Col>
             </Row>
             <Row
-                className="justify-content-md-center rowDescription"
+                className="min-vh-100 rowDescription d-flex flex-column justify-content-around"
                 id="description"
-                ref={ref}
+                ref={skillsPageRef}
             >
-                <Col md={4} className="rowDescription__column">
-                    <h3 className="rowDescription__title">O mnie</h3>
-                    <p className="rowDescription__paragraph text-justify">
-                        Mam 23 lata. Pochodzę ze Szczecina, aktualnie mieszkam w
-                        Poznaniu. W wolnym czasie uwielbiam grać w gry od
-                        Paradox Interactive oraz opiekować się roślinami. Kiedyś
-                        dużo grałem w siatkówkę, aktulanie lubię śledzić wyniki
-                        w różnych ligach.
-                    </p>
-                    <p className="rowDescription__paragraph text-justify">
-                        W technikum poznałem Angulara - od tego frameworka
-                        zaczęła się moja przygoda z techologiami webowymi.
-                        Programuję głównie w JavaScript (TypeScript). Staram się
-                        rozwijać równolegle w stronę frontu i backu.
-                    </p>
-                </Col>
-                <Col
-                    md={{ span: 4, offset: 2 }}
-                    className="rowDescription__column"
-                >
-                    <h3 className="rowDescription__title">Umiejętności</h3>
-                    <Skill
-                        src={html5}
-                        title="HTML5"
-                        alt="HTML5 Logo"
-                        percentage={75}
+                <div className="d-flex justify-content-center rowDescription__column-container">
+                    <Col md={4} className="rowDescription__column">
+                        <h3 className="rowDescription__title">O mnie</h3>
+                        <p className="rowDescription__paragraph text-justify">
+                            Mam 23 lata. Pochodzę ze Szczecina, aktualnie
+                            mieszkam w Poznaniu. W wolnym czasie uwielbiam grać
+                            w gry od Paradox Interactive oraz opiekować się
+                            roślinami. Kiedyś dużo grałem w siatkówkę, aktulanie
+                            lubię śledzić wyniki w różnych ligach.
+                        </p>
+                        <p className="rowDescription__paragraph text-justify">
+                            W technikum poznałem Angulara - od tego frameworka
+                            zaczęła się moja przygoda z techologiami webowymi.
+                            Programuję głównie w JavaScript (TypeScript). Staram
+                            się rozwijać równolegle w stronę frontu i backu.
+                        </p>
+                    </Col>
+                    <Col
+                        md={{ span: 4, offset: 2 }}
+                        className="rowDescription__column"
+                    >
+                        <h3 className="rowDescription__title">Umiejętności</h3>
+                        <Skill
+                            src={html5}
+                            title="HTML5"
+                            alt="HTML5 Logo"
+                            percentage={75}
+                        />
+                        <Skill
+                            src={Js}
+                            title="JavaScript"
+                            alt="JavaScript logo"
+                            percentage={65}
+                        />
+                        <Skill
+                            src={css3}
+                            title="CSS3"
+                            alt="CSS3 logo"
+                            percentage={70}
+                        />
+                        <Skill
+                            src={angular}
+                            title="Angular"
+                            alt="Angular logo"
+                            percentage={50}
+                        />
+                        <Skill
+                            src={react}
+                            title="React"
+                            alt="React logo"
+                            percentage={50}
+                        />
+                    </Col>
+                </div>
+                <div className="d-flex justify-content-center align-items-center">
+                    <img
+                        className="loadMore__chevron"
+                        src={Chevron}
+                        onClick={() => {
+                            scrollTo(contactPageRef);
+                        }}
                     />
-                    <Skill
-                        src={Js}
-                        title="JavaScript"
-                        alt="JavaScript logo"
-                        percentage={65}
-                    />
-                    <Skill
-                        src={css3}
-                        title="CSS3"
-                        alt="CSS3 logo"
-                        percentage={70}
-                    />
-                    <Skill
-                        src={angular}
-                        title="Angular"
-                        alt="Angular logo"
-                        percentage={50}
-                    />
-                    <Skill
-                        src={react}
-                        title="React"
-                        alt="React logo"
-                        percentage={50}
-                    />
-                </Col>
+                </div>
             </Row>
+            <Row className="min-vh-100" ref={contactPageRef}></Row>
         </Container>
     );
 }
