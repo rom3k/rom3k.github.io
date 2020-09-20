@@ -12,6 +12,7 @@ import html5 from '../assets/html5.svg';
 import css3 from '../assets/css3.svg';
 import angular from '../assets/angular.svg';
 import react from '../assets/react.svg'; // :thinking:
+import nodejs from '../assets/nodejs.svg';
 
 // TODO(rom3k): Use this for future scroll events
 const sizes = {
@@ -122,7 +123,7 @@ export default function MainPage() {
                         className="rowDescription__column"
                     >
                         <h3 className="rowDescription__title">Umiejętności</h3>
-                        <Skill
+                        {/* <Skill
                             src={html5}
                             title="HTML5"
                             alt="HTML5 Logo"
@@ -139,12 +140,36 @@ export default function MainPage() {
                             title="CSS3"
                             alt="CSS3 logo"
                             percentage={70}
-                        />
+                        /> */}
+                        <div className="skill">
+                            <img
+                                src={html5}
+                                alt="HTML5 Logo"
+                                title="HTML5"
+                                className="skill__image"
+                            />
+                            <img
+                                src={css3}
+                                alt="CSS3 Logo"
+                                title="CSS3"
+                                className="skill__image"
+                            />
+                            <img
+                                src={Js}
+                                alt="JavaScript logo"
+                                title="JavaScript"
+                                className="skill__image"
+                            />
+                            <ProgressBar
+                                now={70}
+                                className="skill__progressBar"
+                            />
+                        </div>
                         <Skill
                             src={angular}
                             title="Angular"
                             alt="Angular logo"
-                            percentage={50}
+                            percentage={60}
                         />
                         <Skill
                             src={react}
@@ -152,6 +177,28 @@ export default function MainPage() {
                             alt="React logo"
                             percentage={50}
                         />
+                        <Skill
+                            src={nodejs}
+                            title="Node.js"
+                            alt="Nodejs logo"
+                            percentage={50}
+                        />
+                        <div className="otherSkills">
+                            <h5>Inne umiejętności:</h5>
+                            {[
+                                'TypeScript',
+                                'Sass',
+                                'Express',
+                                'Sequelize',
+                                'SQL',
+                                'Bash',
+                                'npm',
+                                'git',
+                                'Phabricator',
+                            ].map((el) => (
+                                <span className="otherSkills__skill">{el}</span>
+                            ))}
+                        </div>
                     </Col>
                 </div>
                 <div className="d-flex justify-content-center align-items-center">
