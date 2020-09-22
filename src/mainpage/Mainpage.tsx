@@ -17,6 +17,7 @@ import mail from '../assets/email.svg';
 import github from '../assets/github.svg';
 import linkedin from '../assets/linkedin.svg';
 import telegram from '../assets/telegram.svg';
+import cv from '../assets/CV.pdf';
 
 // TODO(rom3k): Use this for future scroll events
 const sizes = {
@@ -121,6 +122,11 @@ export default function MainPage() {
                             Programuję głównie w JavaScript (TypeScript). Staram
                             się rozwijać równolegle w stronę frontu i backu.
                         </p>
+                        <div>
+                            <a className="h5" href={cv} target="_blank">
+                                Moje CV
+                            </a>
+                        </div>
                     </Col>
                     <Col
                         md={{ span: 4, offset: 2 }}
