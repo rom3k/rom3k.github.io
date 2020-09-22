@@ -1,0 +1,554 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.1",
+  "hash": "dd744ad83aabd13d66ae",
+  "publicPath": "",
+  "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+  "assetsByChunkName": {
+    "MainPageComponent": [
+      "MainPageComponent.css",
+      "MainPageComponent.js"
+    ],
+    "main": [
+      "main.css",
+      "main.js"
+    ],
+    "vendor": [
+      "vendor.css",
+      "vendor.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "CV.pdf",
+      "size": 178648,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "MainPageComponent.css",
+      "size": 938,
+      "chunks": [
+        "MainPageComponent"
+      ],
+      "chunkNames": [
+        "MainPageComponent"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "MainPageComponent.js",
+      "size": 24900,
+      "chunks": [
+        "MainPageComponent"
+      ],
+      "chunkNames": [
+        "MainPageComponent"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "angular.svg",
+      "size": 742,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "avatar.jpg",
+      "size": 6370,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "chevron_down.svg",
+      "size": 218,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "css3.svg",
+      "size": 988,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "email.svg",
+      "size": 361,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "github.svg",
+      "size": 1049,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "html5.svg",
+      "size": 841,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "index.html",
+      "size": 415,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "js.svg",
+      "size": 1686,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "linkedin.svg",
+      "size": 677,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "main.css",
+      "size": 473,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "main.js",
+      "size": 23020,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "nodejs.svg",
+      "size": 3356,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "react.svg",
+      "size": 7909,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "telegram.svg",
+      "size": 537,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": false
+      },
+      "emitted": false
+    },
+    {
+      "name": "vendor.css",
+      "size": 239469,
+      "chunks": [
+        "vendor"
+      ],
+      "chunkNames": [
+        "vendor"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendor.js",
+      "size": 1946881,
+      "chunks": [
+        "vendor"
+      ],
+      "chunkNames": [
+        "vendor"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        "vendor",
+        "main"
+      ],
+      "assets": [
+        "vendor.css",
+        "vendor.js",
+        "main.css",
+        "main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        "vendor",
+        "main"
+      ],
+      "assets": [
+        "vendor.css",
+        "vendor.js",
+        "main.css",
+        "main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "MainPageComponent": {
+      "chunks": [
+        "MainPageComponent"
+      ],
+      "assets": [
+        "MainPageComponent.css",
+        "MainPageComponent.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+      "assetsByChunkName": {
+        "HtmlWebpackPlugin_0": "__child-HtmlWebpackPlugin_0"
+      },
+      "assets": [
+        {
+          "name": "__child-HtmlWebpackPlugin_0",
+          "size": 4585,
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "chunkNames": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "info": {},
+          "emitted": false
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "HtmlWebpackCompiler"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js??ref--5-3!node_modules/animate.css/animate.css"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js??ref--5-3!node_modules/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js??ref--5-3!src/app/App.scss"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js??ref--5-3!src/main.scss"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/home/romek/my-projects/rom3k.github.io/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js??ref--5-3!src/mainpage/Mainpage.scss"
+    }
+  ]
+}
