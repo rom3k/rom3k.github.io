@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Col, Row, Image, ProgressBar } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
-const { useEffect, useState, useRef } = React;
+const { useState, useRef } = React;
 
 import './Mainpage.scss';
 import Avatar from '../assets/avatar.jpg';
@@ -13,6 +13,10 @@ import css3 from '../assets/css3.svg';
 import angular from '../assets/angular.svg';
 import react from '../assets/react.svg'; // :thinking:
 import nodejs from '../assets/nodejs.svg';
+import mail from '../assets/email.svg';
+import github from '../assets/github.svg';
+import linkedin from '../assets/linkedin.svg';
+import telegram from '../assets/telegram.svg';
 
 // TODO(rom3k): Use this for future scroll events
 const sizes = {
@@ -123,24 +127,6 @@ export default function MainPage() {
                         className="rowDescription__column"
                     >
                         <h3 className="rowDescription__title">Umiejętności</h3>
-                        {/* <Skill
-                            src={html5}
-                            title="HTML5"
-                            alt="HTML5 Logo"
-                            percentage={75}
-                        />
-                        <Skill
-                            src={Js}
-                            title="JavaScript"
-                            alt="JavaScript logo"
-                            percentage={65}
-                        />
-                        <Skill
-                            src={css3}
-                            title="CSS3"
-                            alt="CSS3 logo"
-                            percentage={70}
-                        /> */}
                         <div className="skill">
                             <img
                                 src={html5}
@@ -211,7 +197,62 @@ export default function MainPage() {
                     />
                 </div>
             </Row>
-            <Row className="min-vh-100" ref={contactPageRef}></Row>
+            <Row className="rowContact" ref={contactPageRef}>
+                <Col
+                    md={{ span: 'auto', offset: 1 }}
+                    style={{ marginTop: '6rem' }}
+                >
+                    <h3 className="rowContact__title">Skontaktuj się</h3>
+                    <div className="contact">
+                        <img
+                            src={mail}
+                            alt="email image"
+                            className="contact__image"
+                        />
+                        <span className="h5">
+                            Email:{' '}
+                            <a href="mailto:romaszkin13@o2.pl">
+                                romaszkin13@o2.pl
+                            </a>
+                        </span>
+                    </div>
+                    <div className="contact">
+                        <img
+                            src={github}
+                            alt="github logo"
+                            className="contact__image"
+                        />
+                        <span className="h5">
+                            Github:{' '}
+                            <a href="https://github.com/rom3k/">rom3k</a>
+                        </span>
+                    </div>
+                    <div className="contact">
+                        <img
+                            src={linkedin}
+                            alt="linkedin logo"
+                            className="contact__image"
+                        />
+                        <span className="h5">
+                            Linkedin:{' '}
+                            <a href="https://www.linkedin.com/in/michał-romaszkin-74a009190/">
+                                Mój profil
+                            </a>
+                        </span>
+                    </div>
+                    <div className="contact">
+                        <img
+                            src={telegram}
+                            alt="telegram logo"
+                            className="contact__image"
+                        />
+                        <span className="h5">
+                            Telegram:{' '}
+                            <a href="https://t.me/romaszkin">romaszkin</a>
+                        </span>
+                    </div>
+                </Col>
+            </Row>
         </Container>
     );
 }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Spinner, Navbar } from 'react-bootstrap';
 import loadable from '@loadable/component';
 import { CSSTransition } from 'react-transition-group';
-const { useEffect, useState } = React;
+const { useEffect, useState, useLayoutEffect } = React;
 
 import './App.scss';
 
@@ -26,8 +26,10 @@ export default function App() {
                 setInProp(false);
             }
         });
-        setLoading(false);
     }, []);
+    useLayoutEffect(() => {
+        setLoading(false);
+    });
 
     if (loading) {
         return (
@@ -67,6 +69,12 @@ export default function App() {
                 </Navbar.Brand>
             </Navbar>
             <MainPage />
+            <Navbar sticky="bottom">
+                <span style={{ marginRight: '1rem' }}>
+                    Created with {'<3'} by myself
+                </span>
+                <a href="https://github.com/rom3k/rom3k.github.io">Source</a>
+            </Navbar>
         </>
     );
 }

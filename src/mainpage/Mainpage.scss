@@ -69,3 +69,19 @@
         margin: 0 0.5rem 0 0;
     }
 }
+
+.rowContact {
+    min-height: calc(100vh - 5rem);
+    &__title {
+        margin-bottom: 3rem;
+    }
+}
+
+.contact {
+    display: flex;
+    &__image {
+        margin-right: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
