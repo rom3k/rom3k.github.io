@@ -205,7 +205,7 @@ export default function MainPage() {
                     md={{ span: 'auto', offset: 1 }}
                     style={{ marginTop: '6rem' }}
                 >
-                    <h3 className="rowContact__title">Skontaktuj się</h3>
+                    <h3 className="rowContact__title">{t('get_in_touch')}</h3>
                     <div className="contact">
                         <img
                             src={mail}
@@ -239,7 +239,7 @@ export default function MainPage() {
                         <span className="h5">
                             Linkedin:{' '}
                             <a href="https://www.linkedin.com/in/michał-romaszkin-74a009190/">
-                                Mój profil
+                                {t('my_profile')}
                             </a>
                         </span>
                     </div>

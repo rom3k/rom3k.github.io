@@ -2,7 +2,9 @@
     "about_me": "About me",
     "skills": "Skills",
     "other_skills": "Other skills",
-    "paragraph1": "",
-    "paragraph2": "",
-    "my_resume": "My Resume (in Polish)"
+    "paragraph1": "I'm 23 years old. I was born in Szczecin. Currently living in Poznań, Poland. In a free time i love to play Paradox Interactive games and taking care of my plants. I used to play volleyball a lot, now I follow scores in different leagues",
+    "paragraph2": "In technical school I discovered Angular - from this framework my journey with web technologies stared. I do stuff mostly in JavaScript. I try to develop my skill in front-end and back-end as well.",
+    "my_resume": "My Resume (in Polish)",
+    "get_in_touch": "Get in touch",
+    "my_profile": "My profile"
 }
