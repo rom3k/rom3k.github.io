@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Container, Col, Row, Image, ProgressBar } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 const { useState, useRef } = React;
+import { useTranslation } from 'react-i18next';
 
 import './Mainpage.scss';
 import Avatar from '../assets/avatar.jpg';
@@ -45,6 +46,7 @@ export default function MainPage() {
     });
     const skillsPageRef = useRef(null);
     const contactPageRef = useRef(null);
+    const { t, i18n } = useTranslation();
 
     return (
         <Container fluid>
@@ -108,19 +110,14 @@ export default function MainPage() {
             >
                 <div className="d-flex justify-content-center rowDescription__column-container">
                     <Col md={4} className="rowDescription__column">
-                        <h3 className="rowDescription__title">O mnie</h3>
+                        <h3 className="rowDescription__title">
+                            {t('about_me')}
+                        </h3>
                         <p className="rowDescription__paragraph text-justify">
-                            Mam 23 lata. Pochodzę ze Szczecina, aktualnie
-                            mieszkam w Poznaniu. W wolnym czasie uwielbiam grać
-                            w gry od Paradox Interactive oraz opiekować się
-                            roślinami. Kiedyś dużo grałem w siatkówkę, aktulanie
-                            lubię śledzić wyniki w różnych ligach.
+                            {t('paragraph1')}
                         </p>
                         <p className="rowDescription__paragraph text-justify">
-                            W technikum poznałem Angulara - od tego frameworka
-                            zaczęła się moja przygoda z techologiami webowymi.
-                            Programuję głównie w JavaScript (TypeScript). Staram
-                            się rozwijać równolegle w stronę frontu i backu.
+                            {t('paragraph2')}
                         </p>
                         <div>
                             <a className="h5" href={cv} target="_blank">
@@ -132,7 +129,7 @@ export default function MainPage() {
                         md={{ span: 4, offset: 2 }}
                         className="rowDescription__column"
                     >
-                        <h3 className="rowDescription__title">Umiejętności</h3>
+                        <h3 className="rowDescription__title">{t('skills')}</h3>
                         <div className="skill">
                             <img
                                 src={html5}
@@ -176,7 +173,7 @@ export default function MainPage() {
                             percentage={50}
                         />
                         <div className="otherSkills">
-                            <h5>Inne umiejętności:</h5>
+                            <h5>{t('other_skills')}</h5>
                             {[
                                 'TypeScript',
                                 'Sass',
