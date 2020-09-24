@@ -4,7 +4,7 @@ import { Spinner, Navbar } from 'react-bootstrap';
 import loadable from '@loadable/component';
 import { CSSTransition } from 'react-transition-group';
 import { useTranslation } from 'react-i18next';
-const { useEffect, useState, useLayoutEffect } = React;
+const { useEffect, useState, useLayoutEffect, Suspense } = React;
 
 import './App.scss';
 
@@ -15,9 +15,16 @@ const MainPage = loadable(
         )
 );
 
+const SpinnerComponent = () => {
+    return (
+        <Spinner animation="border" variant="secondary">
+            <span className="sr-only">Ładowanie...</span>
+        </Spinner>
+    );
+};
+
 export default function App() {
     // TODO(rom3k): Put all into one state
-    const [loading, setLoading] = useState(true);
     const [inProp, setInProp] = useState(false);
     const [clickedClass, setClickedClass] = useState(false);
     const [t, i18n] = useTranslation();
@@ -31,27 +38,6 @@ export default function App() {
             }
         });
     }, []);
-    useLayoutEffect(() => {
-        setLoading(false);
-    });
-
-    if (loading) {
-        return (
-            <div
-                style={{
-                    display: 'flex',
-                    width: '100vw',
-                    height: '100vh',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}
-            >
-                <Spinner animation="border" variant="secondary">
-                    <span className="sr-only">Ładowanie...</span>
-                </Spinner>
-            </div>
-        );
-    }
     // TODO(rom3k): Create proper router
     return (
         <>
@@ -96,7 +82,9 @@ export default function App() {
                     <span className="switch__lang">EN</span>
                 </div>
             </Navbar>
-            <MainPage />
+            <Suspense fallback={<SpinnerComponent />}>
+                <MainPage />
+            </Suspense>
             <Navbar sticky="bottom">
                 <span style={{ marginRight: '1rem' }}>
                     Created with {'<3'} by myself
