@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Spinner, Navbar } from 'react-bootstrap';
 import loadable from '@loadable/component';
 import { CSSTransition } from 'react-transition-group';
-const { useEffect, useState, useLayoutEffect } = React;
+import { useTranslation } from 'react-i18next';
+const { useEffect, useState, useLayoutEffect, Suspense } = React;
 
 import './App.scss';
 
@@ -14,9 +15,19 @@ const MainPage = loadable(
         )
 );
 
+const SpinnerComponent = () => {
+    return (
+        <Spinner animation="border" variant="secondary">
+            <span className="sr-only">Ładowanie...</span>
+        </Spinner>
+    );
+};
+
 export default function App() {
-    const [loading, setLoading] = useState(true);
+    // TODO(rom3k): Put all into one state
     const [inProp, setInProp] = useState(false);
+    const [clickedClass, setClickedClass] = useState(false);
+    const [t, i18n] = useTranslation();
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -27,32 +38,12 @@ export default function App() {
             }
         });
     }, []);
-    useLayoutEffect(() => {
-        setLoading(false);
-    });
-
-    if (loading) {
-        return (
-            <div
-                style={{
-                    display: 'flex',
-                    width: '100vw',
-                    height: '100vh',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}
-            >
-                <Spinner animation="border" variant="secondary">
-                    <span className="sr-only">Ładowanie...</span>
-                </Spinner>
-            </div>
-        );
-    }
     // TODO(rom3k): Create proper router
     return (
         <>
             <Navbar
                 sticky="top"
+                className="justify-content-between"
                 style={{
                     backgroundColor: inProp ? '#eee' : '',
                 }}
@@ -67,8 +58,33 @@ export default function App() {
                         <span>Michał Romaszkin</span>
                     </CSSTransition>
                 </Navbar.Brand>
+
+                <div className="switch d-flex">
+                    <span className="switch__lang">PL</span>
+                    <div className="switch__container">
+                        <div
+                            className={
+                                'switch__clickable' +
+                                (clickedClass ? ' clicked' : '')
+                            }
+                            onClick={() => {
+                                setClickedClass((state) => {
+                                    if (state) {
+                                        i18n.changeLanguage('pl');
+                                    } else {
+                                        i18n.changeLanguage('en');
+                                    }
+                                    return !state;
+                                });
+                            }}
+                        />
+                    </div>
+                    <span className="switch__lang">EN</span>
+                </div>
             </Navbar>
-            <MainPage />
+            <Suspense fallback={<SpinnerComponent />}>
+                <MainPage />
+            </Suspense>
             <Navbar sticky="bottom">
                 <span style={{ marginRight: '1rem' }}>
                     Created with {'<3'} by myself
