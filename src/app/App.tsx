@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Spinner, Navbar } from 'react-bootstrap';
 import loadable from '@loadable/component';
 import { CSSTransition } from 'react-transition-group';
+import { useTranslation } from 'react-i18next';
 const { useEffect, useState, useLayoutEffect } = React;
 
 import './App.scss';
@@ -15,8 +16,11 @@ const MainPage = loadable(
 );
 
 export default function App() {
+    // TODO(rom3k): Put all into one state
     const [loading, setLoading] = useState(true);
     const [inProp, setInProp] = useState(false);
+    const [clickedClass, setClickedClass] = useState(false);
+    const [t, i18n] = useTranslation();
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -53,6 +57,7 @@ export default function App() {
         <>
             <Navbar
                 sticky="top"
+                className="justify-content-between"
                 style={{
                     backgroundColor: inProp ? '#eee' : '',
                 }}
@@ -67,6 +72,29 @@ export default function App() {
                         <span>Michał Romaszkin</span>
                     </CSSTransition>
                 </Navbar.Brand>
+
+                <div className="switch d-flex">
+                    <span className="switch__lang">PL</span>
+                    <div className="switch__container">
+                        <div
+                            className={
+                                'switch__clickable' +
+                                (clickedClass ? ' clicked' : '')
+                            }
+                            onClick={() => {
+                                setClickedClass((state) => {
+                                    if (state) {
+                                        i18n.changeLanguage('pl');
+                                    } else {
+                                        i18n.changeLanguage('en');
+                                    }
+                                    return !state;
+                                });
+                            }}
+                        />
+                    </div>
+                    <span className="switch__lang">EN</span>
+                </div>
             </Navbar>
             <MainPage />
             <Navbar sticky="bottom">

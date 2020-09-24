@@ -1,3 +1,5 @@
+// TODO(rom3k): Dać tekst do lewej, dodać twarde spacje, sekcja kontaktu po prawej stronie,
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Col, Row, Image, ProgressBar } from 'react-bootstrap';
@@ -121,7 +123,7 @@ export default function MainPage() {
                         </p>
                         <div>
                             <a className="h5" href={cv} target="_blank">
-                                Moje CV
+                                {t('my_resume')}
                             </a>
                         </div>
                     </Col>
